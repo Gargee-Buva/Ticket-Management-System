@@ -11,8 +11,8 @@ export const signup = async (req, res) => {
 
     //Fire inngest event
 
-    await inngest.send({
-      name: "user/signup",
+    await inngest.send({  // sends an event 
+      name: "user/signup",  // name of an event 
       data: {
         email,
       },
