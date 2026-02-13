@@ -4,6 +4,7 @@ import User from "../../models/user.js";
 import { NonRetriableError } from "inngest";
 import { sendMail } from "../../utils/mailer.js";
 
+// pipelines
 export const onUserSignup = inngest.createFunction(
   { id: "on-user-signup", retries: 2 },
   { event: "user/signup" },
